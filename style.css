@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    overflow: hidden;
+    background-color: hsl(0, 0%, 98%);
+    height: 100vh;
+}
+
+.dark-mood{
+    background-color: rgb(24, 24, 36);
+}
+
+.bg-img{
+    width: 100%;
+}
+
+#mob-bg{
+    display: none;
+}
+
+.todo-app{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    width: 35%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .title{
+    font-size: 35px;
+    letter-spacing: 10px;
+    color: hsl(0, 0%, 98%);
+    font-weight: 700;
+}
+
+.add-task{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.add-task,
+.tasks{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.dark-mood .add-task,
+.dark-mood .tasks,
+.dark-mood input[type='text'],
+.dark-mood .footer,
+.dark-mood .footer nav{
+    background-color: rgb(37, 39, 60);
+}
+
+input[type='text']{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.dark-mood input[type='text']{
+    caret-color: hsl(220, 98%, 61%);
+    color: rgb(173, 175, 200);
+}
+
+input[type='radio']{
+    width: 22px;
+    height: 22px;
+    left: 5px;
+    position: relative;
+    appearance: none;
+}
+
+
+input[type='radio']::before{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 1px solid hsl(236, 33%, 92%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.add-task,
+.tasks > div{
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.tasks > div span{
+    content: url(images/icon-cross.svg);
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.tasks > div:hover span{
+    display: block;
+}
+
+.tasks > div.hide{
+    display: none;
+}
+
+.dark-mood input[type='radio']::before{
+    border-color: hsl(235, 19%, 35%);
+}
+
+.tasks > div{
+    border-bottom: 1px solid hsl(236, 33%, 92%);
+}
+
+.dark-mood .tasks > div{
+    border-bottom-color: hsl(235, 19%, 35%);;
+}
+
+.tasks label{
+    padding: 12px;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.dark-mood .tasks label{
+    color: rgb(173, 175, 200);
+}
+
+.footer{
+    justify-content: space-between;
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px 0 #ddd;
+    color: hsl(236, 9%, 61%);
+    display: none;
+    position: relative;
+}
+
+.dark-mood .footer{
+    box-shadow: none;
+    color: hsl(235, 19%, 35%);
+}
+
+.footer nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.footer nav ul li{
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.footer ul li:hover,
+.footer .clear-completed:hover{
+    color: hsl(235, 19%, 35%);
+}
+
+.footer nav ul li.active,
+.dark-mood li.active{
+    color: hsl(220, 98%, 61%);
+}
+
+.dark-mood .footer ul li:hover,
+.dark-mood .footer .clear-completed:hover{
+    color: #fff;
+}
+
+.re-order{
+    color: hsl(236, 9%, 61%);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+
+input[type="radio"]:checked::after{
+    content: url(images/icon-check.svg);
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border-radius: 50%;
+    left: 1px;
+    top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label.done{
+    color: hsl(236, 9%, 61%);
+    text-decoration: line-through;
+}
+
+.dark-mood label.done{
+    color: hsl(235, 19%, 35%);
+}
+
+.clear-completed{
+    cursor: pointer;
+}
+
+@media (max-width:412px) {
+    #desk-bg{
+        display: none;
+    }   
+
+    #mob-bg{
+        display: block;
+    }
+
+    .todo-app{
+        width: 100%;
+        padding: 0 25px;
+        top: 5%;
+    }
+
+    .footer nav{
+        position: absolute;
+        top: 80px;
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .re-order{
+        margin-top: 140px;
+    }
+
+    .tasks > div span{
+        display: block;
+    }
+}
+

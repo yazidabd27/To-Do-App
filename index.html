@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="images/bg-desktop-light.jpg" class="bg-img" id="desk-bg" alt="">
+            <img src="images/bg-mobile-light.jpg" class="bg-img" id="mob-bg" alt="">
+
+            <div class="todo-app">
+               <div class="header">
+                    <div class="title">TODO</div>
+
+                    <div class="toggler">
+                        <img src="images/icon-moon.svg" alt="" style="cursor: pointer;">
+                    </div>
+               </div>
+
+                <div class="add-task">
+                    <input type="radio">
+                    <input type="text" placeholder="Create a new todo...">
+                </div>
+                
+                <form action="" class="tasks">
+                </form>
+                
+                <div class="footer">
+                    <div class="items-left">
+                        <span class="number"></span>
+                        items left
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="active all">All</li>
+                            <li class="activeTasks">Active</li>
+                            <li class="completed">Completed</li>
+                        </ul>
+                    </nav>
+                    <div class="clear-completed">Clear Completed</div>
+                </div>
+                <div class="re-order">Drag and drop to reorder list</div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+
+</html>
