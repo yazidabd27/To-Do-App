@@ -192,14 +192,6 @@ input[type='radio']::before{
     color: #fff;
 }
 
-.re-order{
-    color: hsl(236, 9%, 61%);
-    font-size: 12px;
-    text-align: center;
-    margin-top: 50px;
-    display: none;
-}
-
 input[type="radio"]:checked::after{
     content: url(images/icon-check.svg);
     position: absolute;
@@ -251,10 +243,6 @@ label.done{
         justify-content: center;
         left: 0;
         padding: 20px 0;
-    }
-
-    .re-order{
-        margin-top: 140px;
     }
 
     .tasks > div span{
