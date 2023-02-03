@@ -1,8 +1,7 @@
 let inputField=document.querySelector('.add-task input[type="text"]');
 let submitTask=document.querySelector('.add-task input[type="radio"]');
 let tasks=document.querySelector('.tasks');
-let footer=document.querySelector('.footer');
-let reOrder=document.querySelector('.re-order');
+let footer=document.querySelector('footer');
 let itemsLeft=document.querySelector('.items-left .number');
 let allTasks=document.querySelector('.all');
 let activeTasks=document.querySelector('.activeTasks');
@@ -85,8 +84,6 @@ function addTask(taskValue,  state){
         
         if(tasksNumber===0){
             footer.style.display='none';
-            reOrder.style.display='none';
-    
         }
     }
 
@@ -100,7 +97,6 @@ function addTask(taskValue,  state){
 
     itemsLeft.innerHTML=tasksNumber;
     footer.style.display='flex';
-    reOrder.style.display='block';
 
     radios.forEach((radio,index)=>{
 
@@ -164,9 +160,7 @@ clearCompletedTasks.onclick=()=>{
     })
 
     if(tasksNumber===0){
-        footer.style.display='none';
-        reOrder.style.display='none';
-
+        footer.style.display='none'
     }
 }
 
